@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Activities / News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="IT College Logo">
+    <h1>College of Information Technology  University of Benghazi</h1>
+</header>
+
+<div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="activities.html">College Activities / News</a>
+    <a href="departments.html">Departments</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="register.html">Student Register</a>
+    <a href="login.html">Login / Logout</a>
+    <button onclick="toggleTheme()">Light / Dark</button>
+</div>
+
+<div class="content">
+    <h1>Activities</h1>
+    <div id="activitiesGrid" class="activities-grid">
+       
+    </div>
+</div>
+
+<footer>
+    © <span id="year"></span> College of Information Technology  University of Benghazi
+</footer>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>

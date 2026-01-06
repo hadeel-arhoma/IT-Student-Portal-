@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+#faculty-overview h3 {
+  color: #4aa3ff;
+}
+#faculty-overview h2 {
+  color: #4aa3ff;
+}
+#academic-programs h2 {
+  color: #6fcf97;
+}
+
+#faculty-goals h2 {
+  color: #4aa3ff;
+}
+
+#future-vision h2 {
+   color: #6fcf97;
+}
+     </style>
+</head>  
+<body>
+
+<header>
+    <img src="logo.png" alt="IT College Logo">
+    <h1>College of Information Technology  University of Benghazi</h1>
+</header>
+ 
+
+<div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="activities.html">College Activities / News</a>
+    <a href="departments.html">Departments</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="register.html">Student Register</a>
+    <a href="login.html">Login / Logout</a>
+
+    <button onclick="toggleTheme()">Light / Dark</button>
+</div>
+
+<div class="content">
+<section id="faculty-overview">
+  <h2>Faculty of Information Technology</h2>
+  <h3>University of Benghazi</h3>
+  <p>
+    The Faculty of Information Technology is one of the key academic faculties at the University of Benghazi.
+    It focuses on education and research in computing and information systems.
+  </p>
+</section>
+
+<section id="academic-programs">
+  <h2>Academic Programs</h2>
+  <p>
+    The faculty offers undergraduate programs in Computer Science, Information Systems, and related fields.
+    The programs combine theoretical foundations with practical skills to prepare students for the technology sector.
+  </p>
+</section>
+
+<section id="faculty-goals">
+  <h2>Faculty Goals</h2>
+  <p>
+    The faculty aims to graduate qualified professionals capable of contributing to technological development.
+    It supports innovation, problem solving, and continuous learning to meet local and global market needs.
+  </p>
+</section>
+
+<section id="future-vision">
+  <h2>Future Vision</h2>
+  <p>
+    The faculty seeks to enhance academic quality, support scientific research, and strengthen cooperation with industry.
+    It works toward building a strong digital future for the community.
+  </p>
+</section>
+</div>
+
+
+<footer>
+    © <span id="year"></span> College of Information Technology  University of Benghazi
+</footer>
+  
+  
+<script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

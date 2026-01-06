@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>IT STUDENT PORTAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+
+<header>
+    <img src="logo.png" alt="IT College Logo">
+    <h1>College of Information Technology  University of Benghazi</h1>
+</header>
+
+<div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="activities.html">College Activities / News</a>
+    <a href="departments.html">Departments</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="register.html">Student Register</a>
+    <a href="login.html">Login / Logout</a>
+
+    <button onclick="toggleTheme()">Light / Dark</button>
+</div>
+
+<div class="content">
+
+    <!-- ===== Welcome ===== -->
+    <div class="home-box">
+        <h1>Welcome to College System Dashboard</h1>
+        <p>
+            This web system is designed to represent the College of Information Technology
+            at the University of Benghazi.
+            It provides a unified interface to manage academic and student-related information.
+        </p>
+    </div>
+
+    <!-- ===== System Purpose ===== -->
+    <div class="home-box">
+        <h2>System Purpose</h2>
+        <p>
+            The purpose of this system is to demonstrate the use of HTML, CSS, and JavaScript
+            in building a dynamic web application.
+            It simulates a college information system for educational purposes.
+        </p>
+    </div>
+
+    <!-- ===== System Services ===== -->
+    <div class="home-box">
+        <h2>System Services</h2>
+
+        <ul class="home-list">
+            <li>View college departments and academic structure</li>
+            <li>Browse college activities and announcements</li>
+            <li>Student registration and profile management</li>
+            <li>Display departments, teachers, and courses information</li>
+            <li>Light and dark theme support for better usability</li>
+        </ul>
+    </div>
+
+    <!-- ===== User Guidance ===== -->
+    <div class="home-box">
+        <h2>User Guide</h2>
+
+        <ul class="home-list">
+           <li> New students should use the Student Register page to create an account.</li>
+           <li> Registered students can login to access their profile information.</li>
+           <li>Visitors can browse departments and college activities without login.</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © <span id="year"></span> College of Information Technology  University of Benghazi
+</footer>
+
+<script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
+

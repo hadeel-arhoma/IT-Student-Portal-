@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Teachers</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>  
+<body>
+
+<header>
+    <img src="logo.png" alt="IT College Logo">
+    <h1>College of Information Technology  University of Benghazi</h1>
+</header>
+
+<div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="activities.html">College Activities / News</a>
+    <a href="departments.html">Departments</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="register.html">Student Register</a>
+    <a href="login.html">Login / Logout</a>
+
+    <button onclick="toggleTheme()">Light / Dark</button>
+</div>
+
+<div class="content">
+<h1>Department Teachers</h1>
+<div id="departmentsContainer"></div>
+
+<div id="profFormContainer" class="hidden">
+    <h3 id="formTitle">Edit Info</h3>
+    <form id="profForm">
+        
+        <div style="margin-bottom: 10px;">
+            <button type="submit">Save</button>
+         <button type="button" onclick="closeTeacherForm()">Cancel</button>
+        </div>
+
+        <table>
+            <tr>
+                <td><label for="teacher_ID">Teacher_ID</label></td>
+                <td><input type="number" id="teacher_ID" required></td>
+            </tr>
+            <tr>
+                <td><label for="teacher_En_Name">En_Name</label></td>
+                <td><input type="text" id="teacher_En_Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="teacher_Arb_Name">Arb_Name</label></td>
+                <td><input type="text" id="teacher_Arb_Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="teacher_prefix">Prefix</label></td>
+                <td><input type="text" id="teacher_prefix"></td>
+            </tr>
+            <tr>
+                <td><label for="teacher_degree">Degree</label></td>
+                <td><input type="text" id="teacher_degree"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</div>
+
+
+<footer>
+    © <span id="year"></span> College of Information Technology  University of Benghazi
+</footer>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
