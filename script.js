@@ -32,7 +32,8 @@ window.addEventListener("load", () => {
             card.innerHTML = `
                 <h3>${activity.title}</h3>
                 <p>${activity.date}</p>
-                <div class="dots" onclick="toggleMenu('menu${index}')">⋮</div>
+                <div class="dots" onclick="toggleMenu(event,'menu${index}')">⋮</div>
+
                 <div class="menu" id="menu${index}">
                     <button onclick="showDetails('${activity.details}')">Detail</button>
                     <button onclick="deleteCard(this)">Delete</button>
@@ -47,10 +48,20 @@ window.addEventListener("load", () => {
 });
 
 /* ===== Toggle Menu لكل كارد ===== */
-function toggleMenu(id) {
+function toggleMenu(e, id) {
+    e.stopPropagation();
+    closeAllMenus();
     const m = document.getElementById(id);
     m.style.display = m.style.display === "block" ? "none" : "block";
 }
+/* ===== closeAllMenus ===== */
+function closeAllMenus() {
+    document.querySelectorAll(".menu").forEach(menu => {
+        menu.style.display = "none";
+    });
+}
+document.addEventListener("click", closeAllMenus);
+
 
 /* ===== Show details / Delete Card ===== */
 function showDetails(text) {
@@ -600,7 +611,7 @@ function displayTeachers(departmentName) {
 
     // زر إضافة أستاذ
     const addBtn = document.createElement("button");
-    addBtn.textContent = "إضافة أستاذ";
+    addBtn.textContent = "Add Teacher" ;
     addBtn.style.marginBottom = "10px";
     addBtn.onclick = () => openTeacherForm(dep);
     container.appendChild(addBtn);
